@@ -1,0 +1,129 @@
+.badge {
+            background: #dc3545;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        
+        .profile-summary {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: start;
+        }
+        
+        .info-row {
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .info-row:last-child {
+            border-bottom: none;
+        }
+        
+        .status-badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status-student { background: #e3f2fd; color: #1565c0; }
+        .status-unemployed { background: #ffebee; color: #c62828; }
+        .status-underemployed { background: #fff3e0; color: #ef6c00; }
+        .status-employed { background: #e8f5e8; color: #2e7d32; }
+        
+        .notifications-list, .messages-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .notification-item, .message-item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: white;
+        }
+        
+        .message-item.unread {
+            border-left: 4px solid #667eea;
+            background: #f8f9ff;
+        }
+        
+        .notification-header, .message-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .notification-status {
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status-sent { background: #fff3cd; color: #856404; }
+        .status-accepted { background: #d4edda; color: #155724; }
+        .status-declined { background: #f8d7da; color: #721c24; }
+        .status-pending { background: #d1ecf1; color: #0c5460; }
+        
+        .notification-details p {
+            margin: 0.3rem 0;
+            font-size: 0.9rem;
+            color: black;
+        }
+        
+        .notification-actions {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #f0f0f0;
+        }
+
+         
+        /* Change notification text color to #333 */
+        .notification-item .notification-header strong,
+        .notification-item .notification-details p,
+        .notification-item .notification-details {
+            color: #333 !important;
+        }
+   
+        
+        .btn-small {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+        
+        .message-time {
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .message-content {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        .dashboard-grid h4 {
+            color: black;
+            margin-bottom: 0.5rem;
+        }
+        
+        .dashboard-grid p {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-summary {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }

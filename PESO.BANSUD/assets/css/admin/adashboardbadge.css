@@ -1,0 +1,20 @@
+.badge {
+            background: #dc3545;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        
+.dashboard-grid h4 {
+            color: b;
+            margin-bottom: 0.5rem;
+        }
+        
+.dashboard-grid p {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+

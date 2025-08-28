@@ -1,0 +1,125 @@
+/* Shared Sidebar Styles for Requirements System */
+
+/* Sidebar styles for disabled links */
+.sidebar-nav a.disabled {
+    color: #999 !important;
+    cursor: not-allowed !important;
+    opacity: 0.5;
+    position: relative;
+}
+
+.sidebar-nav a.disabled:hover {
+    background: none !important;
+    color: #999 !important;
+}
+
+.sidebar-nav a.disabled-partial {
+    color: #ff9800 !important;
+    border-left: 3px solid #ff9800 !important;
+}
+
+.sidebar-nav a.highlight {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7) !important;
+    color: #856404 !important;
+    border-left: 4px solid #ffc107;
+    animation: pulse 2s infinite;
+}
+
+.sidebar-nav .badge {
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.sidebar-nav .badge.required {
+    background: #dc3545;
+    color: white;
+    animation: blink 1.5s infinite;
+}
+
+.sidebar-nav .badge.completed {
+    background: #28a745;
+    color: white;
+}
+
+.sidebar-nav .warning-badge {
+    background: #ff9800;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.locked-icon {
+    margin-left: auto;
+    opacity: 0.7;
+}
+
+.locked-icon i {
+    font-size: 0.8rem;
+}
+
+.text-success {
+    color: #28a745 !important;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { 
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); 
+    }
+    70% { 
+        box-shadow: 0 0 0 10px rgba(255, 193, 7, 0); 
+    }
+    100% { 
+        box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); 
+    }
+}
+
+@keyframes blink {
+    0%, 50% { 
+        opacity: 1; 
+    }
+    51%, 100% { 
+        opacity: 0.5; 
+    }
+}
+
+/* Requirements completion alert */
+.requirements-incomplete-alert {
+    background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+    border: 1px solid #ffc107;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #856404;
+    text-align: center;
+    animation: pulse 3s infinite;
+}
+
+.requirements-incomplete-alert i {
+    color: #ff6b35;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.requirements-incomplete-alert .btn-complete {
+    background: #ff6b35;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.requirements-incomplete-alert .btn-complete:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+}

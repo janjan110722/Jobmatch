@@ -1,0 +1,246 @@
+ /* Disabled button styles */
+        .btn-disabled {
+            background: #ccc !important;
+            color: #666 !important;
+            cursor: not-allowed !important;
+            opacity: 0.6;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: none;
+        }
+        
+        .btn-disabled:hover {
+            background: #ccc !important;
+            color: #666 !important;
+            transform: none;
+        }
+        
+        .dropdown-btn.btn-disabled {
+            padding: 0.5rem 1rem;
+            width: 100%;
+            text-align: left;
+        }
+        
+        /* Disabled stat card styles */
+        .stat-card-disabled {
+            opacity: 0.6;
+            cursor: not-allowed !important;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card-disabled:hover {
+            transform: none !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+        }
+        
+        .lock-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(220, 53, 69, 0.9);
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+        
+        /* Requirements alert popup styles */
+        .requirements-alert-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            padding: 1rem;
+        }
+        
+        .requirements-alert {
+            background: white;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+        }
+        
+        .requirements-alert-header {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        
+        .requirements-alert-header i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .requirements-alert-header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .requirements-alert-body {
+            padding: 2rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .requirements-alert-body p {
+            margin-bottom: 1rem;
+        }
+        
+        .requirements-alert-footer {
+            padding: 1rem 2rem 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .popup-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .popup-btn-primary {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+        }
+        
+        .popup-btn-primary:hover {
+            background: linear-gradient(135deg, #218838, #1ea176);
+            transform: translateY(-2px);
+        }
+        
+        .popup-btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+        
+        .popup-btn-secondary:hover {
+            background: #545b62;
+        }
+        
+        .sidebar-nav .warning-badge {
+            background: #ff9800;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+            font-weight: bold;
+            animation: blink 1.5s infinite;
+        }
+        
+        .sidebar-nav a.disabled-partial {
+            background: linear-gradient(135deg, #ff9800, #f57c00) !important;
+            color: white !important;
+            border-left: 4px solid #ff6f00 !important;
+        }
+        
+        .sidebar-nav a.disabled-partial:hover {
+            background: linear-gradient(135deg, #f57c00, #ef6c00) !important;
+        }
+        
+        .sidebar-nav a.disabled-partial .warning-badge {
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff6f00;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Requirements popup styles (existing) */
+        .requirements-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            padding: 1rem;
+        }
+        
+        .requirements-popup {
+            background: white;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: slideIn 0.3s ease;
+        }
+        
+        .requirements-popup-header {
+            background: linear-gradient(135deg, #ffc107, #e0a800);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        
+        .requirements-popup-header i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .requirements-popup-header h3 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+        
+        .requirements-popup-body {
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .requirements-popup-body ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .requirements-popup-body li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .requirements-popup-footer {
+            padding: 1rem 2rem 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }

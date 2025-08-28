@@ -1,0 +1,60 @@
+/* Clickable Stats Cards */
+.clickable-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    background: white; /*kulay ng background kung ilan ang resident, jobs, etc*/
+    border-radius: 50px 0;
+}
+
+.clickable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: inherit;
+}
+
+.clickable-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.clickable-card:hover:before {
+    left: 100%;
+}
+
+.stat-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    transform: none;
+    font-size: 2rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    color: green;
+}
+
+.clickable-card:hover .stat-icon {
+    opacity: 1.0;
+    transform: scale(1.1);
+}
+
+.clickable-card .stat-number {
+    position: relative;
+    z-index: 2;
+}
+
+.clickable-card .stat-label {
+    position: relative;
+    z-index: 2;
+}

@@ -1,0 +1,1341 @@
+/* RESET AND BASE STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: black;
+  background-color: rgb(30, 42, 69);
+}
+
+/* LOGIN STYLES - BACKGROUND */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background with blur effect */
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("/images/bansud Building.jpg");
+  background-size: 100% 100%; /* Adjusted for better quality */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(0px);
+  transform: scale(1); /* Slightly scale to avoid blur edges */
+  z-index: -1;
+
+}
+
+/* LOGIN CONTAINER */
+
+.login-form {
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glass shine effect */
+.login-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.logo h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo section with circular logo */
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.logo-image {
+  width: 125%;
+  height: 125%;
+  margin-bottom: 7px;
+  margin-right: 2px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.logo-text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-link p {
+  color: black; /*para sa dont have an account*/
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/*para sa placeholher input*/
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: black;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input::placeholder {
+  color: black;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: black;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/*button para sa create new message*/
+
+.btn-primary {
+  width: fit-content;
+  padding: 0.75rem;
+  background: rgba(102, 126, 234, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: rgba(90, 111, 216, 0.9);
+}
+
+.btn-secondary {
+  width: fit-content;
+  padding: 0.75rem;
+  background:#6c757d;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: 1px solid #f5c6cb;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: 1px solid #c3e6cb;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.register-link p {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.register-link a {
+  color: #a0c4ff;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(160, 196, 255, 0.5);
+}
+
+/* DASHBOARD STYLES */
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem;
+}
+
+.header {
+  background: green; /*kulay ng header*/
+  padding: 2rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: black;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logout-btn {
+  background: #dc3545;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.logout-btn:hover {
+  background: #c82333;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.dashboard-card .dashboard-grid p{
+  color: white;
+  font-weight: 100;
+}
+
+ /*for Glassmorphism Effect sa lahat ng background*/
+.dashboard-card {
+ 
+  background: rgba(255, 255, 255, 0.1); /*kulay ng bacground Recent Residents, Recent Jobs, Quick Actions*/
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.dashboard-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.dashboard-card h3 {
+  color: white; /*kulay ng text Recent Residents, Recent Jobs, Quick Actions*/
+  margin-bottom: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;/*kulay ng bacgroud kung ilan ang resident, jobs, etc meron din sa card_icon css*/
+  padding: 1.5rem;
+  border-radius: 50px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.stat-label {
+  color: black; /*kulay ng text ng total resident etc*/
+  margin-top: 0.5rem;
+}
+
+/* Sidebar Navigation */
+
+.main-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: rgb(30, 42, 69);
+  color: white;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  background-color:  rgb(101, 92, 228);
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.admin-label, .resident-label {
+  font-size: 12px;
+  opacity: 0.8;
+  display: block;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sidebar-nav {
+  padding: 20px 0;
+  color: black;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin: 5px 0;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: rgba(255, 255, 255, 0.8); /*kulay ng text sa side bar*/
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+.sidebar-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding-left: 25px;
+}
+
+.sidebar-nav a.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-right: 3px solid #fff;
+}
+
+.sidebar-nav a i {
+  margin-right: 12px;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+  color: white; /*para sa color ng icon sa sidebar*/
+}
+
+.notification-badge {
+  background: #ff4444;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-left: auto;
+  min-width: 18px;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0);
+  }
+}
+
+.main-content {
+  margin-left: 250px;
+  flex: 1;
+  background: rgb(30, 42, 69);
+  min-height: 100vh;
+}
+
+.main-content .header {
+  background: rgb(101, 92, 228);
+  padding: 26px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.main-content .header h1 {
+  margin: 0;
+  color: black;
+}
+
+.main-content .dashboard-container {
+  padding: 30px;
+}
+
+/* Table Styles */
+
+.table-container {
+  background: white;/*background ng table*/
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Responsive table wrapper for horizontal scrolling */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Minimum width to prevent cramping */
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  white-space: nowrap; /* Prevent text wrapping in cells */
+}
+
+th {
+  background: black;/*para sa back ground ng lahat ng table header*/
+  font-weight: 600;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+tr:hover {
+  background: #f8f9fa; /*hover ng laman ng table*/
+}
+
+/* Mobile-first responsive table styles */
+@media (max-width: 768px) {
+  .table-container {
+    margin: 0 -15px; /* Extend to edges on mobile */
+    border-radius: 0;
+  }
+
+  .table-responsive {
+    border-radius: 0;
+  }
+
+  table {
+    min-width: 800px; /* Wider minimum on mobile for better scrolling */
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  /* Compact action buttons for mobile */
+  .btn-secondary {
+    font-size: 0.7rem !important;
+    padding: 0.25rem 0.4rem !important;
+    margin: 0.1rem !important;
+  }
+
+  /* Stack action buttons vertically on very small screens */
+  @media (max-width: 480px) {
+    .btn-secondary {
+      display: block;
+      width: 100%;
+      margin-bottom: 0.2rem !important;
+    }
+  }
+}
+
+/* Alternative card-style table for mobile (can be used with a toggle) */
+@media (max-width: 768px) {
+  .table-card-view table,
+  .table-card-view thead,
+  .table-card-view tbody,
+  .table-card-view th,
+  .table-card-view td,
+  .table-card-view tr {
+    display: block;
+  }
+
+  .table-card-view thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table-card-view tr {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .table-card-view td {
+    border: none !important;
+    position: relative;
+    padding: 0.5rem 0 0.5rem 45%;
+    white-space: normal;
+  }
+
+  .table-card-view td:before {
+    content: attr(data-label) ": ";
+    position: absolute;
+    left: 6px;
+    width: 40%;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+  }
+}
+
+/* Table loading state */
+.table-loading {
+  position: relative;
+}
+
+.table-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+/* Improved status badges for mobile */
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .status-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+/* Enhanced table pagination for mobile */
+.table-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-top: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .table-pagination {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .table-pagination .pagination-info {
+    order: 2;
+    font-size: 0.9rem;
+  }
+
+  .table-pagination .pagination-controls {
+    order: 1;
+    display: flex;
+    gap: 0.5rem;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .main-content .header {
+    padding: 15px 20px;
+  }
+  
+  .main-content .dashboard-container {
+    padding: 20px;
+  }
+
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/*  LANDING PAGE STYLE  */
+
+/* set up para sa space logo na peso bansud */
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px; /* margin ng magkabilang gilid ng logo */
+}
+
+/* Header ng  landing page */
+.landing-header {
+  background-color: rgb(101, 92, 228);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position:sticky; 
+  top: 0;
+  z-index: 1000; 
+}
+
+.landing-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing-header .logo h1 {
+  color: white; /* para sa kulay ng peso bansud */
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.landing-header .logo p {
+  color: white; /* para sa kulay ng Public Employment Service Office */
+  font-size: 0.8rem;
+}
+
+/* Main navigation for the landing page */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* space ng nav like Homen, About Us, Services, Contact Us */
+}
+
+.main-nav a {
+  color: white; /* font color of nav */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: black; /* Highlight color on hover */
+}
+
+/* Hero section for the landing page */
+.home-section-landing {
+  color: white;
+  text-align: center;
+  padding: 8rem 20px; /* Increased padding for prominence */
+  min-height: 100vh; /* laki ng picture */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carousel Container */
+.carousel-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Carousel Slides */
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+/* Carousel Navigation Buttons */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.carousel-btn {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(1px);
+  pointer-events: all;
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: white;
+  transform: scale(1.1);
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 999;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.indicator.active {
+  background-color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Overlay for better text readability on hero image */
+
+.home-section-landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+.home-content-landing {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  pointer-events: none;
+}
+
+.home-content-landing h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.home-content-landing p {
+  font-size: 1.20rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.home-content-landing a {
+  pointer-events: all;
+}
+
+/* Buttons for the landing page hero section */
+
+.btn-primary-landing,
+.btn-secondary-landing {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 100;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-landing {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-primary-landing:hover {
+   background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-secondary-landing {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary-landing:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* General information sections */
+.info-section {
+  padding: 8rem 0; /* space sa taas ng About PESO Bansud*/
+  text-align: center;
+  background-color: white;
+}
+
+/* font color of  About PESO Bansud */
+.info-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem; /* space ng discription sa title */
+  position: relative;
+  display: inline-block;
+}
+
+.info-section h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #667eea; /*kulay ng guhit sa baba ng title*/
+  border-radius: 2px;
+}
+
+.info-section p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+}
+
+/* Background color of our service */
+.bg-light {
+  background-color: #f8f9fa;
+}
+
+/* Grid for services section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-item {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.service-item h3 {
+  color: black; /*kulay ng title ng nasa tiles*/
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Contact section specific styles */
+#contact p {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#contact p i {
+  color: black; /* icon color in contact us*/
+  font-size: 1.2rem;
+}
+
+/* Footer for the landing page */
+
+.landing-footer {
+  background-color: rgb(101, 92, 228);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments for landing page */
+@media (max-width: 768px) {
+  .landing-header .container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logo-section {
+    flex-direction: row;
+    text-align: center;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .logo-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-image {
+  width: 125%;
+  height: 125%;
+  margin-bottom: 5px;
+  margin-right: 2px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .home-content-landing h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-content-landing p {
+    font-size: 1rem;
+  }
+
+  .btn-primary-landing,
+  .btn-secondary-landing {
+    display: block;
+    margin: 1rem auto;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .info-section {
+    padding: 3rem 0;
+  }
+
+  .info-section h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Carousel responsive adjustments */
+  .carousel-nav {
+    padding: 0 10px;
+  }
+  
+  .carousel-btn {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+  
+  .carousel-indicators {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content-landing h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ========================================
+   HAMBURGER NAVIGATION FOR SIDEBAR
+   ======================================== */
+
+/* Hamburger Toggle Button */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1003;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 12px;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-toggle:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: scale(1.05);
+}
+
+.sidebar-toggle.active {
+    background: linear-gradient(135deg, #764ba2 0%, #8e44ad 100%);
+}
+
+/* Resident Sidebar Toggle (Green Theme) */
+.sidebar-toggle.resident {
+    background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%);
+}
+
+.sidebar-toggle.resident:hover {
+    background: linear-gradient(135deg, #2e7d32 0%, #43a047 100%);
+}
+
+.sidebar-toggle.resident.active {
+    background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+}
+
+/* Hamburger Icon Animation */
+.hamburger-icon {
+    width: 20px;
+    height: 16px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.3s ease-in-out;
+}
+
+.hamburger-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: white;
+    border-radius: 1px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) { top: 0px; }
+.hamburger-icon span:nth-child(2) { top: 6px; }
+.hamburger-icon span:nth-child(3) { top: 12px; }
+
+/* Hamburger Animation when Active */
+.sidebar-toggle.active .hamburger-icon span:nth-child(1) {
+    top: 6px;
+    transform: rotate(135deg);
+}
+
+.sidebar-toggle.active .hamburger-icon span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.sidebar-toggle.active .hamburger-icon span:nth-child(3) {
+    top: 6px;
+    transform: rotate(-135deg);
+}
+
+/* Sidebar Overlay for Mobile */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Sidebar Responsive Behavior */
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+    
+    .sidebar.mobile-hidden {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        position: fixed;
+        z-index: 1001;
+        height: 100vh;
+        overflow-y: auto;
+    }
+    
+    .sidebar.mobile-active {
+        transform: translateX(0);
+    }
+    
+    .main-content.has-sidebar-toggle {
+        margin-left: 0;
+        transition: margin-left 0.3s ease;
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+    .sidebar-toggle {
+        display: none !important;
+    }
+    
+    .sidebar-overlay {
+        display: none !important;
+    }
+}
+
+/* Prevent body scroll when sidebar is open on mobile */
+body.sidebar-mobile-open {
+    overflow: hidden;
+}
+
+/* ========================================
+   END HAMBURGER NAVIGATION
+   ======================================== */

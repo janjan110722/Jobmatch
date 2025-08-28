@@ -1,0 +1,236 @@
+@import url(/assets/css/style.css);
+
+.password-group {
+    position: relative;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 16px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.input-with-icon input {
+    padding-left: 40px !important;
+}
+
+.password-input-container {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: black;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.password-toggle:hover {
+    color: white;
+    text-shadow: 0 0 10px rgba(160, 196, 255, 0.5);
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(254, 238, 238, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #ff6b6b;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.error-message i {
+    font-size: 16px;
+}
+
+.locked-message {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #ff6b6b;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.lock-icon {
+    font-size: 3rem;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.locked-message h3 {
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.locked-message p {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Approval Popup Styles */
+        .approval-popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .approval-popup {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .approval-popup-header {
+            background: linear-gradient(135deg, #ffa726, #ff9800);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px 12px 0 0;
+            text-align: center;
+        }
+
+        .approval-popup-header i {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .approval-popup-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .approval-popup-body {
+            padding: 2rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .approval-popup-body p {
+            margin-bottom: 1rem;
+        }
+
+        .approval-popup-body ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+
+        .approval-popup-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .approval-popup-footer {
+            padding: 1rem 2rem 2rem;
+            text-align: center;
+        }
+
+        .popup-btn {
+            background: linear-gradient(135deg, #2196f3, #1976d2);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .popup-btn:hover {
+            background: linear-gradient(135deg, #1976d2, #1565c0);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+        }
+
+        /* Smooth transitions for show/hide */
+        .locked-message, form {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .locked-message.hiding {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        form.showing {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .approval-popup {
+                width: 95%;
+                margin: 1rem;
+            }
+
+            .approval-popup-body {
+                padding: 1.5rem;
+            }
+
+            .approval-popup-header {
+                padding: 1rem;
+            }
+        }

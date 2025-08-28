@@ -1,0 +1,293 @@
+.status-badge {
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status-sent {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-accepted {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-declined {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-pending {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+        
+        .status-expired {
+            background: #fce8e8;
+            color: #d32f2f;
+            border: 1px solid #d32f2f;
+        }
+
+        .job-info-card {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .job-info-card h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .detail-row {
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+        
+        .residents-selection {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .selection-controls {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .selection-count {
+            margin-left: auto;
+            font-weight: 500;
+            color: #667eea;
+        }
+        
+        .residents-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .resident-item {
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .resident-item:last-child {
+            border-bottom: none;
+        }
+        
+        .resident-checkbox {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        
+        .resident-checkbox:hover {
+            background: #333;
+        }
+        
+        .resident-checkbox input[type="checkbox"] {
+            margin-right: 1rem;
+            transform: scale(1.2);
+        }
+        
+        .resident-info {
+            flex: 1;
+        }
+        
+        .resident-details {
+            margin-top: 0.3rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .employment-status,
+        .profession,
+        .barangay {
+            font-size: 0.8rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+        }
+        
+        .employment-status {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .profession {
+            background: #fff3e0;
+            color: #ef6c00;
+        }
+        
+        .barangay {
+            background: #e8f5e8;
+            color: #2e7d32;
+        }
+        
+        .no-residents {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+        }
+        
+        .no-residents h4 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h3 {
+            margin: 0;
+            color: #667eea;
+        }
+        
+        .close {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .close:hover {
+            color: #333;
+        }
+        
+        .modal-body {
+            padding: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .resident-details {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+            
+            .selection-controls {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0.5rem;
+            }
+            
+            .selection-count {
+                margin-left: 0;
+                text-align: center;
+            }
+        }
+
+        .notification-detail-section {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .notification-detail-section h4 {
+            color: #667eea;
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #e9ecef;
+            padding-bottom: 0.5rem;
+        }
+
+        .notification-detail-section p {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .notification-detail-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .field-help {
+            display: block;
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+        }
+
+        .deadline-date {
+            font-size: 0.9rem;
+        }
+
+        .deadline-date.expired {
+            color: #dc3545;
+            font-weight: 500;
+        }
+
+        .expired-label {
+            background: #dc3545;
+            color: white;
+            padding: 0.1rem 0.4rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+        }
+
+        .no-deadline {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        .deadline-text {
+            color: #28a745;
+            font-weight: 500;
+        }
+
+        .expired-text {
+            color: #dc3545;
+            font-weight: 500;
+        }
+
+        .expired-indicator {
+            background: #dc3545;
+            color: white;
+            padding: 0.1rem 0.4rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+        }

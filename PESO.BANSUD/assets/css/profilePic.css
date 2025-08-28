@@ -1,0 +1,57 @@
+/* Profile Dropdown Styles */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.1rem;
+}
+.profile-pic {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4F8A8B;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: box-shadow 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+.profile-pic:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    border-color: #2C3E50;
+}
+.dropdown-content {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 0.1rem 0.1rem; /* para sa size ng container sa dropdown sa profile*/
+    min-width: 180px;
+    z-index: 100;
+    display: none;
+    animation: dropdownFadeIn 0.2s;
+}
+@keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.dropdown-btn {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1rem;
+    text-align: left;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    text-decoration: none;
+}
+.dropdown-btn:hover {
+    background: #4F8A8B;
+    color: #fff;
+}

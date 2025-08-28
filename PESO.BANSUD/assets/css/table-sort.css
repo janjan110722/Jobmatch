@@ -1,0 +1,77 @@
+/* Table Sorting Styles */
+.sortable-table th {
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.sortable-table th:hover {
+    background-color: black;
+}
+
+.sortable-table th.sortable {
+    padding-right: 25px;
+}
+
+.sortable-table th .sort-icon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.sortable-table th.sort-asc .sort-icon::before {
+    content: '\f0de'; /* Font Awesome up arrow */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #007bff;
+}
+
+.sortable-table th.sort-desc .sort-icon::before {
+    content: '\f0dd'; /* Font Awesome down arrow */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #007bff;
+}
+
+.sortable-table th:not(.sort-asc):not(.sort-desc) .sort-icon::before {
+    content: '\f0dc'; /* Font Awesome sort icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.sortable-table th.sort-asc,
+.sortable-table th.sort-desc {
+    background-color: black;
+}
+
+/* Custom styles for different themes */
+.sortable-table th.sortable:active {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sortable-table th .sort-icon {
+        right: 5px;
+        font-size: 10px;
+    }
+    
+    .sortable-table th.sortable {
+        padding-right: 20px;
+    }
+}
+
+/* Loading state for async sorting */
+.sorting-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.sorting-loading th {
+    cursor: wait !important;
+}

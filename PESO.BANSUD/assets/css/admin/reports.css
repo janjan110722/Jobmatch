@@ -1,0 +1,219 @@
+/*para sa space ng button*/
+        .report-controls {
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        /*para sa report tulad ng report type, date range*/ 
+        .control-section h3 {
+            color: black;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .report-tabs {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .report-tab {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        /*para sa background ng report type button */
+        .report-tab.active,
+        .report-tab:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        /*para sa space ng date sa date range*/
+        .date-range-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .date-range-select {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .date-display {
+            font-size: 0.9rem;
+            color: white;
+        }
+        /*para sa gap ng button sa export */
+        .export-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        /*space ng margin sa baba ng container ng mga card */
+        .overview-stats {
+            margin-bottom: 2rem;
+        }
+        /*para sa space ng mga card */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 1.5rem;
+        }
+        /*para sa background ng report card */
+        .stat-card {
+            background: linear-gradient(135deg, white 0%, white 100%);
+            color: black;
+            padding: 0.1rem;
+            border-radius: 10px;
+            text-align: center;
+            
+        }
+        /*para sa size ng text number sa card */
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        /*para sa size ng text sa card tulad ng total residents etc */
+        .stat-label {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+        
+        .stat-change,
+        .stat-sublabel {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        /*para sa size ng graph container card */
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-top: 1rem;
+        }
+        
+        .report-summary {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .summary-item {
+            background: #f8f9fa;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        
+        .table-container {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        
+        .status-badge {
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status-active {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-inactive {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-sent {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-accepted {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-declined {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-unemployed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .status-employed {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-self-employed {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+        
+        .status-student {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+        
+        .text-success {
+            color: #28a745;
+            font-weight: 500;
+        }
+        
+        .text-danger {
+            color: #dc3545;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .report-controls {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .report-tabs {
+                justify-content: center;
+            }
+            
+            .export-controls {
+                flex-direction: row;
+            }
+        }
+        
+        @media print {
+            .nav-menu,
+            .report-controls,
+            .header .user-info {
+                display: none;
+            }
+            
+            .dashboard-container {
+                margin-left: 0;
+            }
+            
+            .dashboard-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }

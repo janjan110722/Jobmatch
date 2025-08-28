@@ -1,0 +1,498 @@
+ .notification-summary {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .pending-count {
+            background: #fff3cd;
+            color: #856404;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .filter-tabs-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            gap: 1rem;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-tab {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white; /*kulay ng text tulad ng all, pending, responded etc.*/
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .filter-tab.active,
+        .filter-tab:hover {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .search-form {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .search-form input {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 200px;
+        }
+        
+        .notifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .notification-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            background: white;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .notification-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .notification-card.status-sent {
+            border-left: 4px solid #ffc107;
+        }
+        
+        .notification-card.status-accepted {
+            border-left: 4px solid #28a745;
+        }
+        
+        .notification-card.status-declined {
+            border-left: 4px solid #dc3545;
+        }
+        
+        .notification-card.deadline-expired {
+            border-left: 4px solid #dc3545;
+            background: #fdf2f2;
+        }
+        
+        .notification-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .notification-header h4 {
+            color: #667eea;
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.3;
+        }
+        
+        .notification-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            align-items: flex-end;
+        }
+        
+        .status-badge {
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status-sent {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status-accepted {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-declined {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .expired-badge {
+            background: #dc3545;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+        
+        .notification-company {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .notification-details {
+            margin-bottom: 1rem;
+            
+        }
+        
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .detail-label {
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .notification-message,
+        .response-message {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .notification-message strong,
+        .response-message strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .notification-message p,
+        .response-message p {
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        .response-message {
+            background: #e8f5e8;
+        }
+        
+        .notification-actions {
+            display: flex;
+            gap: 0.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+            align-items: center;
+        }
+        
+        .btn-small {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.8rem;
+        }
+        
+        .expired-notice {
+            color: #dc3545;
+            font-size: 0.8rem;
+            font-weight: 500;
+            padding: 0.3rem 0.6rem;
+            background: #f8d7da;
+            border-radius: 10px;
+        }
+        
+        .no-notifications {
+            text-align: center;
+            padding: 3rem;
+            color: white;
+        }
+        
+        .no-notifications h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        /* Job Offer Card */
+        .job-offer-card {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .job-offer-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .job-offer-header h4 {
+            color: #667eea;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .company-name {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-description,
+        .job-requirements,
+        .admin-message {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+        }
+        
+        .job-description strong,
+        .job-requirements strong,
+        .admin-message strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Response Form */
+        .response-form-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 2rem;
+        }
+        
+        .response-form-card h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .response-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .response-option {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: block;
+        }
+        
+        .response-option:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+        
+        .response-option input[type="radio"] {
+            display: none;
+        }
+        
+        .response-option input[type="radio"]:checked + .option-content {
+            color: white;
+        }
+        
+        .response-option.accept input[type="radio"]:checked ~ .option-content,
+        .response-option.accept:has(input[type="radio"]:checked) {
+            background: #28a745;
+            border-color: #28a745;
+        }
+        
+        .response-option.decline input[type="radio"]:checked ~ .option-content,
+        .response-option.decline:has(input[type="radio"]:checked) {
+            background: #dc3545;
+            border-color: #dc3545;
+        }
+        
+        .option-content {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .option-icon {
+            font-size: 1.5rem;
+            font-weight: bold;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+        }
+        
+        .response-option.accept .option-icon {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .response-option.decline .option-icon {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .option-text strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .option-text span {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Deadline Expired Notice */
+        .deadline-expired-notice {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 10px;
+            padding: 2rem;
+            text-align: center;
+            color: #721c24;
+        }
+        
+        .deadline-expired-notice h4 {
+            color: #721c24;
+            margin-bottom: 1rem;
+        }
+        
+        .deadline-text {
+            color: #28a745;
+            font-weight: 500;
+        }
+        
+        .expired-text {
+            color: #dc3545;
+            font-weight: 500;
+        }
+        
+        .expired-indicator {
+            background: #dc3545;
+            color: white;
+            padding: 0.1rem 0.4rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h3 {
+            margin: 0;
+            color: #667eea;
+        }
+        
+        .close {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .close:hover {
+            color: #333;
+        }
+        
+        .modal-body {
+            padding: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .notifications-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-tabs-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .filter-tabs {
+                justify-content: center;
+            }
+            
+            .search-form input {
+                width: 100%;
+            }
+            
+            .response-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .detail-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+ .notification-detail .detail-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .notification-detail .detail-section h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .notification-detail .detail-section p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }

@@ -1,0 +1,59 @@
+ .profile-display {
+            margin-top: 1rem;
+        }
+        
+        .profile-section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .profile-section h4 {
+            color: black;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+        
+        .info-item strong {
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        .info-item span {
+            color: #333;
+            font-size: 1rem;
+        }
+        
+        .status-badge {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-block;
+            width: fit-content;
+        }
+        
+        .status-student { background: #e3f2fd; color: #1565c0; }
+        .status-unemployed { background: #ffebee; color: #c62828; }
+        .status-underemployed { background: #fff3e0; color: #ef6c00; }
+        .status-employed { background: #e8f5e8; color: #2e7d32; }
+        
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }

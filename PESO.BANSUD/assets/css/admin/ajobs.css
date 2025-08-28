@@ -1,0 +1,284 @@
+.btn-small {
+            padding: 0.3rem 0.6rem;
+            font-size: 0.8rem;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-danger:hover {
+            background: #c82333;
+        }
+        
+        .status-badge {
+            padding: 0.3rem 0.6rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .status-active {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-inactive {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        /* Positions Info Styles */
+        .positions-info {
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+            font-weight: 500;
+        }
+
+        .positions-info .filled {
+            color: #28a745;
+        }
+
+        .positions-info .separator {
+            color: #666;
+        }
+
+        .positions-info .total {
+            color: #333;
+        }
+
+        .full-badge {
+            background: #dc3545;
+            color: white;
+            padding: 0.1rem 0.4rem;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+        }
+
+        .positions-badge {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .full-indicator {
+            background: #dc3545;
+            color: white;
+            padding: 0.1rem 0.4rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+        }
+
+        .field-help {
+            display: block;
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+        }
+        
+        /* Job Details Styles */
+        .job-details {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 2rem;
+        }
+        
+        .job-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        .job-header h2 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-company {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+        
+        .job-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .job-type {
+            background: #e3f2fd;
+            color: #1565c0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .detail-section {
+            margin-bottom: 2rem;
+        }
+        
+        .detail-section h4 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .detail-section p {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 0;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+        }
+        
+        .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-header h3 {
+            margin: 0;
+            color: #333;
+        }
+        
+        .close {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .close:hover {
+            color: #333;
+        }
+        
+        .modal-body {
+            padding: 1.5rem;
+        }
+        
+        .warning-text {
+            color: #721c24;
+            background: #f8d7da;
+            padding: 0.8rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .job-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .deadline-date {
+            font-size: 0.9rem;
+        }
+
+        .deadline-date.expired {
+            color: #dc3545;
+            font-weight: 500;
+        }
+
+        .expired-label {
+            background: #dc3545;
+            color: white;
+            padding: 0.1rem 0.4rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+        }
+
+        .no-deadline {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+
+        .deadline-text {
+            color: #28a745;
+            font-weight: 500;
+        }
+
+        .expired-text {
+            color: #dc3545;
+            font-weight: 500;
+        }
+
+        .expired-indicator {
+            background: #dc3545;
+            color: white;
+            padding: 0.1rem 0.4rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+        }
+
+        .no-deadline-text {
+            color: #666;
+            font-style: italic;
+        }
